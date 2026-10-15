@@ -7,4 +7,5 @@ it stay valid when the document is updated.
 - `second-year-paper.pdf` -- Ex-ante Heterogeneity in Directed Search Games (2025)
 - `cv.pdf` -- curriculum vitae
 - `resume.pdf` -- resume
+- `teaching-statement.pdf` -- teaching statement
 - `teaching-evaluations.pdf` -- student evaluations of teaching, 2019-2026
