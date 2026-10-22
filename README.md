@@ -10,5 +10,5 @@ it stay valid when the document is updated.
 - `teaching-statement.pdf` -- teaching statement
 - `teaching-evaluations.pdf` -- student evaluations of teaching, 2019-2026
 
-`second-year-paper.pdf` is an older copy of `directed-search-games.pdf`, kept so
-links already sent out keep working.
+`second-year-paper.pdf` is an identical copy of `directed-search-games.pdf`, kept so
+links already sent out keep working and show the current version.
