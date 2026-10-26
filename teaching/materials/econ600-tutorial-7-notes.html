@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="William Duan" />
+  <meta name="dcterms.date" content="2026-10-20" />
+  <title>Tutorial 7 Notes (2026–27)</title>
+  <style>:root{--paper:#f5f6f8;--sheet:#fff;--ink:#1a2130;--muted:#5a6475;--rule:#d9dde4;--accent:#1d5a86}
+@media (prefers-color-scheme:dark){:root{--paper:#11151c;--sheet:#181d26;--ink:#e3e7ee;--muted:#9aa4b4;--rule:#2c3441;--accent:#7fb2da;color-scheme:dark}}
+body{background:var(--sheet);color:var(--ink);font:400 1rem/1.65 "Literata",Georgia,serif;max-width:42rem;margin:0 auto;padding:2rem max(16px,env(safe-area-inset-left,0px)) 3rem}
+header{border-bottom:1px solid var(--rule);margin-bottom:1.5rem}
+h1.title{font-size:1.6rem;line-height:1.2;margin:0 0 .3rem}
+p.author,p.date{margin:0;color:var(--muted);font:400 .9rem "IBM Plex Sans",system-ui,sans-serif}
+p.date{margin-bottom:1rem}
+h2{font:600 1.05rem "IBM Plex Sans",system-ui,sans-serif;margin:2rem 0 .5rem;letter-spacing:.01em}
+a{color:var(--accent)}
+li{margin:.4rem 0}
+.webnote{font:400 .85rem "IBM Plex Sans",system-ui,sans-serif;color:var(--muted);border:1px solid var(--rule);border-radius:4px;padding:.5rem .75rem;margin:0 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+table{border-collapse:collapse;margin:.75rem 0;font:400 .9rem "IBM Plex Sans",system-ui,sans-serif}
+th,td{border:1px solid var(--rule);padding:.3rem .6rem;text-align:left}
+figure{margin:1rem 0}
+figure img{max-width:100%;height:auto;background:#fff;border:1px solid var(--rule)}
+figcaption{font:400 .8rem "IBM Plex Sans",system-ui,sans-serif;color:var(--muted)}
+h1:not(.title){font:600 1.05rem "IBM Plex Sans",system-ui,sans-serif;margin:1.75rem 0 .4rem}
+h2{font:600 .95rem "IBM Plex Sans",system-ui,sans-serif;margin:1.2rem 0 .3rem}
+
+h2{font-size:1.15rem}
+p.subtitle{margin:0 0 .3rem;color:var(--muted);font:400 .95rem "IBM Plex Sans",system-ui,sans-serif}
+strong{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.95rem}
+em{color:var(--muted)}
+ol li{margin:.5rem 0}
+.footnotes{font-size:.85rem;color:var(--muted);margin-top:2rem}
+</style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<p class="dossier-back" style="margin:0 0 1rem;font:400 .85rem/1.4 system-ui,sans-serif"><a href="../" style="color:inherit">&larr; Teaching dossier</a></p>
+<script id="dossier-back-hide">try{if(window.self!==window.top){document.querySelector(".dossier-back").hidden=true}}catch(e){}</script>
+<header id="title-block-header">
+<h1 class="title">Tutorial 7 Notes (2026–27)</h1>
+<p class="author">William Duan</p>
+<p class="date">October 20, 2026</p>
+</header>
+<p class="webnote">Notes I wrote after the session for future teaching assistants of ECON 600. Internal file references, a short problem-set follow-up and comments on a past answer key have been removed.</p>
+<p>These notes document what was covered in the tutorial session, for
+the benefit of future TAs. They are not intended as study material for
+students.</p>
+<h2 class="unnumbered" id="topics">Topics</h2>
+<p>The move from choice over goods to choice over lotteries. (i) The
+independence axiom, read off the probability simplex: what the simplex
+is and how to locate a lottery in it, why independence forces
+indifference curves to be straight and parallel, and how independence
+lets one “cancel” a common component of two lotteries. (ii) The
+continuity axiom for lotteries, and the one-directional use of its main
+consequence. (iii) A past exam question in which a lottery is valued by
+a weighted average of its mean and the top of its support: whether these
+preferences are rational, continuous and independent, worked through on
+the simplex. The session closed with advice on how much to write for
+discussion questions on an exam.</p>
+<p>The formal statements of the axioms are on the lecture slides and in
+MWG Section 6.B. The figures at the end are reference sketches for a
+future TA preparing the board work.</p>
+<h2 class="unnumbered" id="objective">Objective</h2>
+<p>The unifying theme of the expected-utility half is that the simplex
+is the working diagram for any question about axioms on lotteries, in
+the same way the two-good budget diagram was for consumer theory.
+Students who can draw the simplex fluently can see in a few seconds
+<em>where</em> a preference fails an axiom — on a curved indifference
+curve, at a non-parallel pair, at a jump on an edge — and then write
+down a counterexample built from exactly the lotteries they were looking
+at. The second half of that sentence matters as much as the first. The
+session made a point of drawing the picture first, saying explicitly
+that the picture is not a proof, and then turning it into one.</p>
+<p>This also connects back to Tutorial 2, where continuity of
+preferences over goods was the subject and the lexicographic order the
+counterexample. The failure of continuity in the exam question has the
+same shape: a preference that is perfectly well-behaved in the interior
+and jumps on a boundary. Saying so explicitly lets students reuse an
+intuition they already have.</p>
+<h2 class="unnumbered" id="comments">Comments</h2>
+<ul>
+<li><p><em>Reading the simplex.</em> I introduced the simplex as the set
+of probability vectors in three dimensions, the triangle cut out of the
+positive orthant by the plane where the probabilities sum to one, and
+then laid it flat. Each vertex is a sure outcome, and a lottery’s
+probability on an outcome is its distance from the opposite edge, scaled
+so that the vertex is at distance one. I justified the last claim with a
+similar-triangles argument on the three-dimensional picture and then had
+the class locate a specific lottery (probabilities one quarter, one
+third and five twelfths) by drawing the three lines parallel to the
+edges.</p>
+<p>The similar-triangles derivation is the most compressible part of the
+session: the claim can be asserted, and the locating exercise is what
+students actually need to be able to do under exam conditions. The
+one-line version to leave them with is that “the probability of an
+outcome is how far you are from the edge where that outcome is
+impossible.”</p></li>
+<li><p><em>Independence: straight and parallel.</em> Stated as:
+indifference curves in the simplex are straight lines, and they are
+parallel. I gave the two halves separately, since they use independence
+differently.</p>
+<p>Straight lines: if two lotteries are indifferent, independence makes
+every mixture of them indifferent to both, so the indifference set
+through them contains the segment joining them. A curved indifference
+curve would require some point on that segment to be off the curve,
+which independence rules out. I drew a curved curve through two
+indifferent points and asked what independence says about the points on
+the segment between them, which made the contradiction visible
+immediately.</p>
+<p>Parallel: take two lotteries with one strictly preferred, and mix
+both with the same third lottery using the same weight. The two mixtures
+sit on a segment that is a scaled copy of the original segment, shrunk
+toward the third lottery, so by similar triangles it is parallel to the
+original. Independence says the ranking of the mixtures is the ranking
+of the originals. If indifference lines were not parallel, then for a
+weight small enough the two mixtures would land on opposite sides of
+some indifference line in the wrong order. The picture to draw is a fan
+of non-parallel lines with the segment shrinking toward the third
+lottery until its endpoints straddle a line the wrong way round.</p>
+<p>One caveat to keep in mind: I stated the result as an “if and only
+if,” which is fine in the three-outcome picture for a complete and
+transitive preference, but students should not take the converse as a
+proof strategy outside the simplex. On an exam, independence is verified
+or refuted from the definition.</p></li>
+<li><p><em>Cancelling a common component.</em> I used independence to
+simplify a comparison: a preference between the lottery with
+probabilities one quarter, one third and five twelfths and the uniform
+lottery, which I then presented as “subtracting” half the uniform
+lottery from both sides and rescaling. The arithmetic is right — the
+first lottery is an equal mixture of the uniform lottery and the lottery
+with probabilities one sixth, one third and one half — but the
+subtract-and-rescale framing passes through objects that are not
+lotteries, since the intermediate vectors no longer sum to one. A future
+TA should present it the other way round: write each lottery as a
+mixture with a common component, then apply the axiom. That is exactly
+what the definition licenses, and it avoids giving students the idea
+that lotteries can be subtracted.</p></li>
+<li><p><em>Continuity and its consequence.</em> Stated in the MWG form:
+for any three lotteries, the set of mixing weights at which a mixture of
+the first two is at least as good as the third is closed, and so is the
+set at which it is at most as good. The consequence I emphasised is that
+if the third lottery lies between the first two in the ranking, some
+mixture is exactly indifferent to it.</p>
+<p>The point that needs saying out loud is that this consequence can
+only be used in one direction. Showing that no indifferent mixture
+exists proves that continuity fails. Exhibiting an indifferent mixture
+proves nothing, since the axiom is a statement about closedness for
+<em>every</em> triple, not existence for one. Proving continuity by
+finding an indifferent mixture is the natural mistake, and it is worth
+naming it as the failure mode before students make it.</p>
+<p>A related trap, which the board work brushed against: the axiom is
+not the same as closed contour sets, so a non-closed upper contour set
+does not by itself refute it. See the bonus note below.</p></li>
+<li><p><em>The exam question.</em> The preference values a lottery at a
+weighted average of its mean and the top of its support. I wrote it in
+class with an unnormalised weight (the mean plus a multiple of the top
+outcome) and a specific weight of one tenth; the two forms represent the
+same family of preferences after rescaling.</p>
+<p>Rationality is immediate: any real-valued representation gives a
+complete and transitive order. Continuity and independence were done on
+a simplex with outcomes 100, 10 and 0. In the interior of the simplex,
+every lottery puts positive probability on 100, so the top of the
+support is constant and indifference curves are the parallel lines of
+the expected value. On the edge opposite the 100 vertex the top of the
+support drops discontinuously, so the edge is a different regime. I
+first gave the argument as a picture — an indifference line from an
+interior lottery reaches the bottom edge at a point drawn as an open
+circle, because that point has lost its upside and is strictly worse —
+and then said explicitly that the picture is not a proof, and that the
+task is to turn it into a counterexample with specific lotteries. The
+independence failure has the same source. Take a lottery that puts a
+sliver of probability on 100, so that it already collects the bonus for
+the top outcome, and a bottom-edge lottery with a higher mean that is
+ranked below it only because it lacks the bonus. Mixing both with the
+100 vertex gives the second lottery the bonus too, the ranking reverts
+to expected value, and it reverses. A future TA should be careful here:
+mixing two bottom-edge lotteries with the 100 vertex does <em>not</em>
+produce a reversal, since both are ranked by their means before and
+after, and that is the configuration one is tempted to draw first.</p>
+<p>For continuity, a construction using sure lotteries over 0 and 10 is
+simpler than the one I gave in class. The question also asks whether the
+preference has an expected-utility representation. It does not, since
+independence fails, and students should be told to state that explicitly
+rather than leave it implied.</p></li>
+<li><p><em>How much to write.</em> I ended with advice for the exam:
+discussion and interpretation questions want a good-enough answer of
+about three lines, not an essay. That advice is worth giving every year,
+before the midterm, and worth tying to the “what does the parameter
+represent” part of this question as an example of the right
+length.</p></li>
+</ul>
+<h2 class="unnumbered" id="practical-notes">Practical notes</h2>
+<p>On ordering: the simplex has to come before both axioms, since
+everything afterwards is drawn on it; and the exam question goes last
+because it uses both axioms and the simplex at once. If time is short,
+cut the similar-triangles derivation of the simplex coordinates and the
+cancellation example, in that order. The parallel-lines picture and the
+exam question are what justify the session.</p>
+<h2 class="unnumbered"
+id="bonus-note-mixture-continuity-versus-closed-contour-sets">Bonus
+note: mixture continuity versus closed contour sets</h2>
+<p>Not covered in the session, but a question a future TA should be
+ready for, since the board work came close to it. Is the continuity
+axiom for lotteries — closedness of the sets of mixing weights at which
+a mixture of two lotteries is at least as good as, or at most as good
+as, a third — equivalent to the upper and lower contour sets being
+closed in the simplex? It is not.</p>
+<p>One direction holds. The map from a mixing weight to the
+corresponding mixture is continuous, and the axiom’s sets of weights are
+exactly the preimages of the contour sets under it, so closed contour
+sets imply the axiom.</p>
+<p>The converse fails, because the axiom only constrains the preference
+along line segments, and a function can be continuous along every line
+without being continuous. The standard example is <span
+class="math inline">\(f(x,y) = x^2y/(x^4+y^2)\)</span> with <span
+class="math inline">\(f(0,0)=0\)</span>. Restricted to any line it is
+continuous, but along the parabola <span
+class="math inline">\(y=x^2\)</span> it is constant at one half while
+the parabola runs into the origin, where <span
+class="math inline">\(f=0\)</span>. Place it around an interior point of
+the simplex and it represents a complete and transitive preference that
+satisfies the axiom, while its upper contour set at level one half is
+not closed.</p>
+<p>The gap disappears once independence is added. Independence and the
+axiom together give an expected-utility representation, which is linear
+in probabilities and therefore has closed contour sets. So for
+preferences that satisfy independence the two notions coincide, and the
+distinction only matters when checking a preference that may fail
+independence — which is exactly the situation in the exam question.</p>
+<p>The practical consequence for students is that exhibiting a
+non-closed upper contour set is not, on its own, a refutation of the
+axiom; the failure has to be shown along a segment of mixtures. In the
+exam question this is easy, because the offending sequence can be taken
+along a single indifference line ending at the bottom edge (the left
+panel of Figure 4). If students write the argument as “upper contour set
+not closed” on an exam, it should be tightened to name the segment.</p>
+<h2 class="unnumbered" id="reference-figures">Reference figures</h2>
+<p>Sketches of the board work, drawn to scale so that a future TA can
+check a picture before putting it up. Throughout, the simplex is
+equilateral, so a lottery’s probability on an outcome is its distance
+from the opposite edge as a fraction of the triangle’s height.</p>
+<figure>
+<img src="econ600-t7-fig0.svg" />
+<figcaption>From three dimensions to the flat simplex. Lotteries over
+three outcomes are the points of the positive orthant whose
+probabilities sum to one, a triangle with a sure outcome at each vertex.
+Laid flat, it is the equilateral triangle used in the figures below, and
+the lottery <span
+class="math inline">\(p=(\tfrac14,\tfrac13,\tfrac{5}{12})\)</span> keeps
+its position relative to the vertices.</figcaption>
+</figure>
+<figure>
+<img src="econ600-t7-fig1.svg" />
+<figcaption>Locating the lottery <span
+class="math inline">\(p=(\tfrac14,\tfrac13,\tfrac{5}{12})\)</span>. Each
+coloured line is the set of lotteries sharing one coordinate with <span
+class="math inline">\(p\)</span>, parallel to the edge on which that
+outcome is impossible; the three meet at <span
+class="math inline">\(p\)</span>.</figcaption>
+</figure>
+<figure>
+<img src="econ600-t7-fig2.svg" />
+<figcaption>Left: under independence, indifference curves are parallel
+straight lines. Right: if <span class="math inline">\(p\sim q\)</span>,
+independence gives <span class="math inline">\(\tfrac12p+\tfrac12q\sim
+p\)</span>, but the midpoint lies off the curve through <span
+class="math inline">\(p\)</span> and <span
+class="math inline">\(q\)</span>, a contradiction.</figcaption>
+</figure>
+<figure>
+<img src="econ600-t7-fig3.svg" />
+<figcaption>Why parallel. With <span class="math inline">\(p&#39;=\alpha
+p+(1-\alpha)r\)</span> and <span class="math inline">\(q&#39;=\alpha
+q+(1-\alpha)r\)</span> (here <span
+class="math inline">\(\alpha=\tfrac12\)</span>), the segment <span
+class="math inline">\(p&#39;q&#39;\)</span> is a scaled copy of <span
+class="math inline">\(pq\)</span>, so it is parallel to it. The solid
+orange line is the indifference line through <span
+class="math inline">\(q\)</span>, with <span
+class="math inline">\(p\)</span> above it, so <span
+class="math inline">\(p\succ q\)</span>. If the indifference line
+through <span class="math inline">\(q&#39;\)</span> were the red one,
+<span class="math inline">\(p&#39;\)</span> would lie below it and <span
+class="math inline">\(q&#39;\succ p&#39;\)</span>, contradicting
+independence. The parallel dashed line keeps <span
+class="math inline">\(p&#39;\)</span> above it.</figcaption>
+</figure>
+<p>For the exam question the vertices are the sure outcomes 100 (top),
+10 (bottom left) and 0 (bottom right). Every lottery off the bottom edge
+has 100 in its support, so there the value is <span
+class="math inline">\((1-\beta)\)</span> times the mean plus the
+constant <span class="math inline">\(100\beta\)</span>, and the
+indifference curves are the lines of constant mean. These are almost
+horizontal, since the mean rises steeply toward the top vertex. On the
+bottom edge the top of the support falls to 10 (or to 0 at the
+bottom-right vertex), and the value drops.</p>
+<figure>
+<img src="econ600-t7-fig4.svg" />
+<figcaption>The exam question’s preference; the red edge is where 100
+drops out of the support. Left: the green indifference line through
+<span class="math inline">\(r\)</span> meets the bottom edge at <span
+class="math inline">\(c\)</span>, but <span
+class="math inline">\(c\)</span> has lost the bonus for the top outcome
+and is strictly worse than <span class="math inline">\(r\)</span>. So
+along the segment of mixtures from <span
+class="math inline">\(c\)</span> to <span
+class="math inline">\(r\)</span>, the set of weights giving something at
+least as good as <span class="math inline">\(r\)</span> is half-open.
+This is a failure along a segment, which is what the axiom requires.
+Right: <span class="math inline">\(p\)</span> puts probability <span
+class="math inline">\(0.01\)</span> on 100 and the rest on 0; <span
+class="math inline">\(q\)</span> is 10 for sure. With <span
+class="math inline">\(\beta=\tfrac12\)</span>, <span
+class="math inline">\(p\)</span> is worth <span
+class="math inline">\(50.5\)</span> and <span
+class="math inline">\(q\)</span> is worth <span
+class="math inline">\(10\)</span>, so <span class="math inline">\(p\succ
+q\)</span> purely through the bonus. Mixing both with sure 100 at weight
+<span class="math inline">\(\tfrac13\)</span> gives <span
+class="math inline">\(q&#39;\)</span> the bonus too; the means are now
+<span class="math inline">\(34\)</span> for <span
+class="math inline">\(p&#39;\)</span> and <span
+class="math inline">\(40\)</span> for <span
+class="math inline">\(q&#39;\)</span>, so <span
+class="math inline">\(q&#39;\)</span> lies on a higher indifference line
+and the ranking reverses.</figcaption>
+</figure>
+</body>
+</html>

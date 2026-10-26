@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teaching Dossier · William Duan</title>
+<meta name="description" content="Teaching dossier of William Duan, Vancouver School of Economics, UBC: evaluation reports and teaching materials, organized by course.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; evidence tables break wider; materials as artifact box + commentary side by side, comment underneath */
+:root{
+  --paper:#f5f6f8; --sheet:#ffffff; --ink:#1a2130; --muted:#5a6475; --rule:#d9dde4;
+  --accent:#1d5a86; --accent-soft:#e3edf5; --warm:#9a5b1e; --hi:#2f7a5a; --lo:#b8bfca;
+  --display:"Literata",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --col:44rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#11151c; --sheet:#181d26; --ink:#e3e7ee; --muted:#9aa4b4; --rule:#2c3441;
+  --accent:#7fb2da; --accent-soft:#1c2a38; --warm:#d9a066; --hi:#6cc39b; --lo:#4a5363; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#11151c; --sheet:#181d26; --ink:#e3e7ee; --muted:#9aa4b4; --rule:#2c3441;
+  --accent:#7fb2da; --accent-soft:#1c2a38; --warm:#d9a066; --hi:#6cc39b; --lo:#4a5363; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 1rem/1.6 var(--body);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 4rem}
+.wrap{max-width:62rem;margin:0 auto}
+.prose{max-width:var(--col)}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,5vw,2.75rem);letter-spacing:-.01em}
+h2{font-size:1.6rem}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header.top{padding-block:3rem 2rem;border-bottom:1px solid var(--rule);display:grid;gap:1rem}
+.byline{color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;font-size:.95rem}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:0;padding:0;list-style:none;font-size:.92rem;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+section{padding-block:2.75rem 0;display:grid;gap:1.1rem}
+section>h2{display:flex;align-items:baseline;gap:.75rem}
+section>h2 .no{font:500 .85rem var(--mono);color:var(--muted)}
+/* evaluations */
+.controls{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:end}
+.controls label{display:grid;gap:.25rem;font-size:.8rem;color:var(--muted)}
+select{font:inherit;font-size:.95rem;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:.35rem .5rem;min-width:9rem}
+button.reset{font:inherit;font-size:.85rem;background:none;border:0;color:var(--accent);cursor:pointer;padding:.4rem 0;text-decoration:underline;text-underline-offset:2px}
+.summary{font-size:.95rem;font-variant-numeric:tabular-nums}
+.summary b{font-weight:600}
+.tablebox{overflow-x:auto;background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{padding:.55rem .7rem;text-align:left;vertical-align:middle;border-bottom:1px solid var(--rule);white-space:nowrap}
+th{font:500 .72rem/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);vertical-align:bottom}
+td.num,th.num{text-align:right}
+tbody tr:last-child td{border-bottom:0}
+td .course{display:block;font-weight:500}
+td .ctitle{display:block;color:var(--muted);font-size:.8rem}
+.lvl{font:500 .68rem var(--mono);padding:.1rem .35rem;border:1px solid var(--rule);border-radius:3px;color:var(--muted);margin-left:.35rem}
+.dist{display:inline-flex;width:84px;height:10px;border-radius:2px;overflow:hidden;background:var(--rule);vertical-align:middle}
+.dist i{display:block;height:100%}
+.dist .d1,.dist .d2{background:var(--warm)} .dist .d3{background:var(--lo)} .dist .d4{background:var(--accent);opacity:.55} .dist .d5{background:var(--accent)}
+.more{font:inherit;font-size:.82rem;background:none;border:1px solid var(--rule);border-radius:4px;color:var(--ink);padding:.2rem .5rem;cursor:pointer}
+.more[aria-expanded="true"]{background:var(--accent-soft)}
+tr.detail td{background:var(--paper);white-space:normal}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.2rem 1.5rem;margin:.25rem 0;padding:0;list-style:none;font-size:.85rem}
+.items li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dotted var(--rule);padding:.15rem 0}
+.items span:last-child{font-family:var(--mono)}
+.note{font-size:.85rem;color:var(--muted)}
+/* materials */
+.item{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:1.25rem 2rem;align-items:start;padding-block:1.5rem;border-top:1px solid var(--rule)}
+.item:first-of-type{border-top:0}
+.item>.comment{grid-column:1/-1}
+@media (max-width:760px){.item{grid-template-columns:minmax(0,1fr)}}
+.box{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;overflow:hidden;min-width:0}
+.boxbar{display:flex;gap:0;border-bottom:1px solid var(--rule);font-size:.85rem}
+.boxbar button{font:inherit;background:none;border:0;border-right:1px solid var(--rule);padding:.5rem .8rem;cursor:pointer;color:var(--muted)}
+.boxbar button[aria-selected="true"]{color:var(--ink);background:var(--accent-soft);font-weight:500}
+.boxbar a{margin-left:auto;padding:.5rem .8rem;white-space:nowrap}
+.frame.tall{aspect-ratio:3/4;max-height:40rem}
+.boxtitle{padding:.5rem .8rem;font-weight:500}
+.frame{aspect-ratio:4/3;max-width:100%;width:100%;background:var(--sheet)}
+.frame iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+.frame .fallback{height:100%;display:grid;place-content:center;gap:.5rem;padding:1.5rem;text-align:center;color:var(--muted);font-size:.9rem}
+.commentary{display:grid;gap:.75rem;min-width:0}
+.credits{font-size:.88rem}
+.credits table{font-size:.85rem}
+.credits td{white-space:normal}
+.comment{font-size:.92rem}
+.comment.none{color:var(--muted);font-size:.88rem}
+.sitecard{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:1.25rem 1.4rem;display:grid;gap:.6rem;max-width:var(--col)}
+.sitecard .url{font:500 .95rem var(--mono)}
+footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
+/* views */
+.js-views .view{display:none}
+.js-views .view.on{display:grid}
+.js-views #home.on{display:block}
+.js-views .course-sec{border-top:0;margin-top:0;padding-top:2.25rem}
+.crumbs{display:none;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1rem;font-size:.85rem;color:var(--muted);padding-bottom:1rem;border-bottom:1px solid var(--rule)}
+.js-views .crumbs{display:flex}
+.nextcourse{display:none;justify-content:flex-end;padding-top:1.5rem;border-top:1px solid var(--rule);font-size:.95rem}
+.js-views .nextcourse{display:flex}
+/* review preview only */
+.anchor{display:none}
+.preview .anchor{display:inline-block;font:500 .68rem var(--mono);color:var(--warm);border:1px solid var(--warm);border-radius:3px;padding:0 .3rem;margin-right:.4rem;vertical-align:.15em}
+.reviewbar{display:none}
+.preview .reviewbar{display:block;margin-top:1rem;padding:.6rem .9rem;border:1px dashed var(--warm);border-radius:6px;font-size:.85rem;color:var(--warm)}
+.pending{border:1px dashed var(--warm);border-radius:6px;padding:1.25rem;color:var(--warm);font-size:.9rem;display:grid;gap:.4rem;min-height:9rem;align-content:center}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+/* courses */
+.overview td a{font-weight:500}
+.course-sec{padding-block:3rem 0;border-top:1px solid var(--rule);margin-top:3rem;display:grid;gap:1.25rem}
+.course-sec>header{display:grid;gap:.4rem}
+.course-sec h2{font-size:1.75rem}
+.course-sec h2 .code{font:500 .95rem var(--mono);color:var(--muted);display:block;margin-bottom:.3rem;letter-spacing:.02em}
+.role{display:flex;flex-wrap:wrap;gap:.35rem .9rem;font-size:.9rem;color:var(--muted)}
+.role span:not(:last-child)::after{content:"·";margin-left:.9rem;color:var(--lo)}
+.sub{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:.5rem}
+nav.courses{display:flex;flex-wrap:wrap;gap:.4rem;font-size:.88rem}
+nav.courses a{border:1px solid var(--rule);border-radius:999px;padding:.2rem .7rem;text-decoration:none;background:var(--sheet);color:var(--ink)}
+nav.courses a:hover{border-color:var(--accent)}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+<div class="view" id="home">
+<header class="top">
+  <span class="eyebrow">Teaching dossier</span>
+  <h1>William Duan</h1>
+  <p class="byline">Vancouver School of Economics, University of British Columbia</p>
+  <p class="prose">Organized by course. Each course lists its official evaluation reports and, where available, teaching materials.</p>
+  <ul class="facts">
+    <li><b>16</b> evaluation reports, 2019–2026</li>
+    <li><b>189</b> student responses</li>
+    <li><b>96%</b> good or very good, averaged across reports</li>
+    <li>Agustín Beltrán Award for Excellence in Teaching, <b>2024, 2025, 2026</b></li>
+  </ul>
+  <nav class="links" aria-label="Documents">
+    <a target="_blank" rel="noopener" href="https://william96123.github.io/teaching-statement.pdf">Teaching statement (PDF)</a>
+    <a target="_blank" rel="noopener" href="https://william96123.github.io/teaching-evaluations.pdf">Teaching evaluations, combined (PDF)</a>
+    <a target="_blank" rel="noopener" href="https://william96123.github.io/cv.pdf">CV (PDF)</a>
+  </nav>
+</header>
+
+<section id="overview" aria-labelledby="h-ov">
+  <h2 id="h-ov">Courses</h2>
+  <div class="tablebox">
+    <table class="overview">
+      <thead><tr><th>Course</th><th>Role</th><th>Terms</th><th class="num">Reports</th><th class="num">Responses</th><th class="num">Overall<br>median /5</th><th class="num">Good or<br>very good</th></tr></thead>
+      <tbody id="ov-rows"></tbody>
+    </table>
+  </div>
+  <p class="note prose">UBC surveys students at the end of every term, and every report I have received is listed under its course. The overall rating is the answer to the report's summary question, “How would you rate the overall contribution of the TA to the course?”, scored from 1 (very poor) to 5 (very good) and reported by UBC as an interpolated median. The share rating good or very good is taken over the students who answered that question and averaged across a course's reports. Fall is September to December and Winter January to April.</p>
+</section>
+</div>
+
+<!-- ============ MATH CAMP ============ -->
+<section class="course-sec view" id="mathcamp" aria-labelledby="h-mc">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-mc"><span class="code">Math Camp</span>UBC Economics Math Camp</h2>
+    <p class="role"><span>Instructor</span><span>MA and PhD math camps</span><span>Summer 2026</span></p>
+  </header>
+  <p class="prose">Taught both the MA and PhD math camps. Designed the PhD sessions with Jesse Perla. In the MA camp, ran the problem sessions and Q&amp;A alongside recorded faculty lectures. No evaluation report.</p>
+
+  <p class="sub">Materials</p>
+  <div class="items-wrap">
+    <article class="item">
+      <div class="box" data-tabs>
+        <div class="boxbar" role="tablist" aria-label="Proof and Real Analysis">
+          <button role="tab" aria-selected="true" data-src="https://ubcecon.github.io/math_camps/slides/proof_and_real_analysis.html" data-open="https://ubcecon.github.io/math_camps/slides/proof_and_real_analysis.pdf">Slides</button>
+          <button role="tab" aria-selected="false" data-src="https://ubcecon.github.io/math_camps/assessments/proof_and_real_analysis_problems.html" data-open="https://ubcecon.github.io/math_camps/assessments/proof_and_real_analysis_problems.pdf">Practice problems</button>
+          <a target="_blank" rel="noopener" class="openlink" href="https://ubcecon.github.io/math_camps/slides/proof_and_real_analysis.pdf">Open PDF</a>
+        </div>
+        <div class="frame"><iframe src="https://ubcecon.github.io/math_camps/slides/proof_and_real_analysis.html" title="Math Camp material" loading="lazy"></iframe></div>
+      </div>
+      <div class="commentary">
+        <span class="eyebrow">PhD sessions</span>
+        <h3>Proof and Real Analysis</h3>
+        <p>Slides and 13 practice problems. Sole author.</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="commentary credits" style="grid-column:1/-1">
+        <h3>Other PhD-session materials</h3>
+        <p>Extended from the MA slides with PhD material. Added PhD-level practice questions to each of the three problem sets. Credits as listed on the course site.</p>
+        <div class="tablebox">
+          <table>
+            <thead><tr><th>Lecture</th><th>Slides</th><th>Practice problems</th></tr></thead>
+            <tbody>
+              <tr><td><a target="_blank" rel="noopener" href="https://ubcecon.github.io/math_camps/slides/linear_algebra.html">Linear Algebra</a></td><td>Jesse Perla, William Duan</td><td><a target="_blank" rel="noopener" href="https://ubcecon.github.io/math_camps/assessments/linear_algebra_problems.html">Jesse Perla</a></td></tr>
+              <tr><td><a target="_blank" rel="noopener" href="https://ubcecon.github.io/math_camps/slides/optimization.html">Optimization</a></td><td>Vitor Farinha Luz, Viktoriya Hnatkovska, William Duan, Ying Gao</td><td><a target="_blank" rel="noopener" href="https://ubcecon.github.io/math_camps/assessments/optimization_problems.html">Vitor Farinha Luz, Viktoriya Hnatkovska, William Duan, Ying Gao</a></td></tr>
+              <tr><td><a target="_blank" rel="noopener" href="https://ubcecon.github.io/math_camps/slides/probability.html">Probability</a></td><td>Vadim Marmer, Paul Schrimpf, William Duan</td><td><a target="_blank" rel="noopener" href="https://ubcecon.github.io/math_camps/assessments/probability_problems.html">Vadim Marmer, Paul Schrimpf</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="sitecard">
+    <a target="_blank" rel="noopener" class="url" href="https://ubcecon.github.io/math_camps/">ubcecon.github.io/math_camps</a>
+    <p>The department course site for the MA and PhD math camps, with recorded lectures by Jesse Perla and Ying Gao. Licensed CC BY-NC-SA 4.0.</p>
+  </div>
+  <nav class="nextcourse" data-next-for="mathcamp" aria-label="Next course"></nav>
+</section>
+
+<!-- ============ ECON 600 ============ -->
+<section class="course-sec view" id="econ600" aria-labelledby="h-600">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-600"><span class="code">ECON 600</span>Advanced Microeconomic Theory I</h2>
+    <p class="role"><span>PhD core</span><span>Teaching assistant</span><span>Every fall since 2021</span></p>
+  </header>
+  <p class="prose">Weekly tutorials, office hours, exam marking.</p>
+  <p class="sub">Evaluations</p>
+  <div data-evals="ECON 600"></div>
+
+  <p class="sub">Materials</p>
+  <div class="items-wrap">
+    <article class="item">
+      <div class="box">
+        <div class="boxbar"><span class="boxtitle">Tutorial outline</span><a target="_blank" rel="noopener" class="openlink" href="materials/econ600-tutorial-outline.html">Open full page</a></div>
+        <div class="frame tall"><iframe src="materials/econ600-tutorial-outline.html" title="Teaching material" loading="lazy"></iframe></div>
+      </div>
+      <div class="commentary">
+        <span class="eyebrow">Fall 2025 and 2026</span>
+        <h3>Tutorial outline</h3>
+        <p>Objectives and a week-by-week plan for the tutorials, with notes on how each year differed.</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="box">
+        <div class="boxbar"><span class="boxtitle">GARP Coding Guide</span><a target="_blank" rel="noopener" class="openlink" href="materials/garp-coding-guide.html">Open full page</a></div>
+        <div class="frame tall"><iframe src="materials/garp-coding-guide.html" title="Teaching material" loading="lazy"></iframe></div>
+      </div>
+      <div class="commentary">
+        <span class="eyebrow">Fall 2026</span>
+        <h3>Testing GARP on real choices</h3>
+        <p>Student guide to the optional coding exercise in Problem Set 3, revised from the 2021 handout.</p>
+        <p class="note">Answer-check section removed from this copy.</p>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="box">
+        <div class="boxbar"><span class="boxtitle">Tutorial 7 notes</span><a target="_blank" rel="noopener" class="openlink" href="materials/econ600-tutorial-7-notes.html">Open full page</a></div>
+        <div class="frame tall"><iframe src="materials/econ600-tutorial-7-notes.html" title="Teaching material" loading="lazy"></iframe></div>
+      </div>
+      <div class="commentary">
+        <span class="eyebrow">Fall 2026</span>
+        <h3>Tutorial 7, choice under risk</h3>
+        <p>Written after each tutorial for future teaching assistants. Internal file references, a problem-set follow-up and comments on a past answer key removed.</p>
+      </div>
+    </article>
+  </div>
+  <nav class="nextcourse" data-next-for="econ600" aria-label="Next course"></nav>
+</section>
+
+<!-- ============ ECON 601 ============ -->
+<section class="course-sec view" id="econ601" aria-labelledby="h-601">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-601"><span class="code">ECON 601</span>Advanced Microeconomic Theory II</h2>
+    <p class="role"><span>PhD core</span><span>Teaching assistant</span><span>Every winter term since 2022</span></p>
+  </header>
+  <p class="prose">Weekly tutorials, office hours, exam marking. Co-designed problem sets over the last two years (not posted).</p>
+  <p class="sub">Evaluations</p>
+  <div data-evals="ECON 601"></div>
+
+  <p class="sub">Materials</p>
+  <div class="items-wrap">
+    <article class="item">
+      <div class="box">
+        <div class="boxbar"><span class="boxtitle">Tutorial outline</span><a target="_blank" rel="noopener" class="openlink" href="materials/econ601-tutorial-outline.html">Open full page</a></div>
+        <div class="frame tall"><iframe src="materials/econ601-tutorial-outline.html" title="Teaching material" loading="lazy"></iframe></div>
+      </div>
+      <div class="commentary">
+        <span class="eyebrow">Winter 2026</span>
+        <h3>Tutorial outline</h3>
+        <p>Objectives and a week-by-week plan for the tutorials.</p>
+      </div>
+    </article>
+  </div>
+  <nav class="nextcourse" data-next-for="econ601" aria-label="Next course"></nav>
+</section>
+
+<!-- ============ ECON 514 ============ -->
+<section class="course-sec view" id="econ514" aria-labelledby="h-514">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-514"><span class="code">ECON 514</span>Information and Incentives</h2>
+    <p class="role"><span>MA</span><span>Teaching assistant</span><span>Winter 2021</span></p>
+  </header>
+  <p class="sub">Evaluations</p>
+  <div data-evals="ECON 514"></div>
+  <nav class="nextcourse" data-next-for="econ514" aria-label="Next course"></nav>
+</section>
+
+<!-- ============ ECON 101 ============ -->
+<section class="course-sec view" id="econ101" aria-labelledby="h-101">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-101"><span class="code">ECON 101</span>Principles of Microeconomics</h2>
+    <p class="role"><span>First year</span><span>Teaching assistant, discussion sections</span><span>Fall 2020 and Summer 2025</span></p>
+  </header>
+  <p class="prose">Two discussion sections in Fall 2020, both online.</p>
+  <p class="sub">Evaluations</p>
+  <div data-evals="ECON 101"></div>
+  <p class="sub">Materials</p>
+  <div class="items-wrap">
+    <article class="item">
+      <div class="box" data-tabs>
+        <div class="boxbar" role="tablist" aria-label="ECON 101 worksheets">
+          <button role="tab" aria-selected="true" data-src="materials/econ101-week1.html" data-open="materials/econ101-week1.html">Week 1</button>
+          <button role="tab" aria-selected="false" data-src="materials/econ101-week2.html" data-open="materials/econ101-week2.html">Week 2</button>
+          <button role="tab" aria-selected="false" data-src="materials/econ101-week10.html" data-open="materials/econ101-week10.html">Week 10</button>
+          <a target="_blank" rel="noopener" class="openlink" href="materials/econ101-week1.html">Open full page</a>
+        </div>
+        <div class="frame"><iframe src="materials/econ101-week1.html" title="Teaching material" loading="lazy"></iframe></div>
+      </div>
+      <div class="commentary">
+        <span class="eyebrow">Fall 2020</span>
+        <h3>Discussion worksheets</h3>
+        <p>Three worksheets I wrote for my sections, on comparative advantage, supply and demand, and costs. Minor typos corrected.</p>
+        <p class="note">The other weeks used materials prepared by the instructor or another teaching assistant.</p>
+      </div>
+    </article>
+  </div>
+  <nav class="nextcourse" data-next-for="econ101" aria-label="Next course"></nav>
+</section>
+
+<!-- ============ ECON 303 ============ -->
+<section class="course-sec view" id="econ303" aria-labelledby="h-303">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-303"><span class="code">ECON 303</span>Intermediate Microeconomic Analysis II</h2>
+    <p class="role"><span>Third year</span><span>Teaching assistant, tutorials</span><span>Winter 2020</span></p>
+  </header>
+  <p class="sub">Evaluations</p>
+  <div data-evals="ECON 303"></div>
+  <nav class="nextcourse" data-next-for="econ303" aria-label="Next course"></nav>
+</section>
+
+<!-- ============ ECON 355 ============ -->
+<section class="course-sec view" id="econ355" aria-labelledby="h-355">
+  <nav class="crumbs" aria-label="Dossier"><a href="#home">&larr; All courses</a><span>William Duan · Teaching dossier</span></nav>
+  <header>
+    <h2 id="h-355"><span class="code">ECON 355</span>Introduction to International Trade</h2>
+    <p class="role"><span>Third year</span><span>Teaching assistant</span><span>Fall 2019</span></p>
+  </header>
+  <p class="prose">Duties included posting lecture notes for the class.</p>
+  <p class="sub">Evaluations</p>
+  <div data-evals="ECON 355"></div>
+  <nav class="nextcourse" data-next-for="econ355" aria-label="Next course"></nav>
+</section>
+
+<footer>
+  <span>William Duan · Vancouver School of Economics, UBC</span>
+  <span>Updated October 2026</span>
+  <a target="_blank" rel="noopener" href="https://sites.google.com/view/william-duan/home">Personal website</a>
+</footer>
+</div>
+
+<script>
+const DATA = [{"term": "Fall 2019", "year": 2019, "code": "ECON 355", "title": "Introduction to International Trade", "section": "001", "level": "UG", "enrolled": 100, "responses": 34, "dist": [1, 3, 5, 8, 17], "median": 4.5, "good": 25, "answered": 34, "pct": 74, "file": "reports/2019-fall-econ355-001.pdf", "items": [["Helpful when asked for assistance", 4.3], ["Well prepared", 4.4], ["Readily available", 4.6], ["Communicated at an appropriate level", 4.4], ["Showed interest in the subject", 4.3], ["Showed knowledge of the subject", 4.6], ["Presented information clearly", 4.3], ["Stimulated interest in the subject", 4.2], ["Receptive to a variety of perspectives", 4.2], ["Treated students with equal respect", 4.5], ["Comments on written work were helpful", 4.2], ["Encouraged independent thought", 4.3], ["Evaluation of work was fair", 4.3], ["Made a positive contribution", 4.4]]}, {"term": "Winter 2020", "year": 2020, "code": "ECON 303", "title": "Intermediate Microeconomic Analysis II", "section": "L2C", "level": "UG", "enrolled": 53, "responses": 10, "dist": [1, 2, 0, 1, 6], "median": 4.7, "good": 7, "answered": 10, "pct": 70, "file": "reports/2020-winter-econ303-l2c.pdf", "items": [["Helpful when asked for assistance", 4.7], ["Well prepared", 4.8], ["Readily available", 4.7], ["Communicated at an appropriate level", 4.7], ["Showed interest in the subject", 4.7], ["Showed knowledge of the subject", 4.6], ["Presented information clearly", 4.7], ["Stimulated interest in the subject", 4.7], ["Receptive to a variety of perspectives", 4.7], ["Treated students with equal respect", 4.7], ["Comments on written work were helpful", 4.8], ["Encouraged independent thought", 4.7], ["Evaluation of work was fair", 4.7], ["Made a positive contribution", 4.7]]}, {"term": "Fall 2020", "year": 2020, "code": "ECON 101", "title": "Principles of Microeconomics", "section": "L5C", "level": "UG", "enrolled": 48, "responses": 17, "dist": [0, 0, 1, 1, 15], "median": 4.9, "good": 16, "answered": 17, "pct": 94, "file": "reports/2020-fall-econ101-l5c.pdf", "items": [["Helpful when asked for assistance", 4.9], ["Well prepared", 4.8], ["Readily available", 4.9], ["Communicated at an appropriate level", 4.8], ["Showed interest in the subject", 4.9], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.7], ["Stimulated interest in the subject", 4.8], ["Receptive to a variety of perspectives", 4.9], ["Treated students with equal respect", 4.9], ["Comments on written work were helpful", 4.9], ["Encouraged independent thought", 4.8], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 4.9]]}, {"term": "Fall 2020", "year": 2020, "code": "ECON 101", "title": "Principles of Microeconomics", "section": "L5D", "level": "UG", "enrolled": 60, "responses": 13, "dist": [0, 0, 1, 2, 10], "median": 4.9, "good": 12, "answered": 13, "pct": 92, "file": "reports/2020-fall-econ101-l5d.pdf", "items": [["Helpful when asked for assistance", 4.6], ["Well prepared", 4.8], ["Readily available", 4.7], ["Communicated at an appropriate level", 4.3], ["Showed interest in the subject", 4.8], ["Showed knowledge of the subject", 4.8], ["Presented information clearly", 4.0], ["Stimulated interest in the subject", 4.6], ["Receptive to a variety of perspectives", 4.5], ["Treated students with equal respect", 4.9], ["Comments on written work were helpful", 3.0], ["Encouraged independent thought", 4.2], ["Evaluation of work was fair", 4.2], ["Made a positive contribution", 4.4]]}, {"term": "Winter 2021", "year": 2021, "code": "ECON 514", "title": "Information and Incentives", "section": "001", "level": "MA", "enrolled": 16, "responses": 7, "dist": [0, 0, 0, 2, 5], "median": 4.8, "good": 7, "answered": 7, "pct": 100, "file": "reports/2021-winter-econ514-001.pdf", "items": [["Helpful when asked for assistance", 4.8], ["Well prepared", 4.9], ["Readily available", 4.9], ["Communicated at an appropriate level", 4.6], ["Showed interest in the subject", 4.6], ["Showed knowledge of the subject", 4.6], ["Presented information clearly", 4.6], ["Stimulated interest in the subject", 4.6], ["Receptive to a variety of perspectives", 4.8], ["Treated students with equal respect", 4.8], ["Comments on written work were helpful", 4.9], ["Encouraged independent thought", 4.8], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 4.6]]}, {"term": "Fall 2021", "year": 2021, "code": "ECON 600", "title": "Advanced Microeconomic Theory I", "section": "L1A", "level": "PhD", "enrolled": 25, "responses": 13, "dist": [0, 0, 0, 3, 10], "median": 4.9, "good": 13, "answered": 13, "pct": 100, "file": "reports/2021-fall-econ600-l1a.pdf", "items": [["Helpful when asked for assistance", 4.9], ["Well prepared", 4.7], ["Readily available", 4.9], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 4.9], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.8], ["Stimulated interest in the subject", 4.8], ["Receptive to a variety of perspectives", 4.9], ["Treated students with equal respect", 4.9], ["Comments on written work were helpful", 4.9], ["Encouraged independent thought", 4.9], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 4.9]]}, {"term": "Winter 2022", "year": 2022, "code": "ECON 601", "title": "Advanced Microeconomic Theory II", "section": "L1A", "level": "PhD", "enrolled": 23, "responses": 8, "dist": [0, 0, 0, 1, 7], "median": 4.9, "good": 8, "answered": 8, "pct": 100, "file": "reports/2022-winter-econ601-l1a.pdf", "items": [["Helpful when asked for assistance", 4.9], ["Well prepared", 4.8], ["Readily available", 4.9], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 4.9], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.9], ["Stimulated interest in the subject", 4.9], ["Receptive to a variety of perspectives", 4.9], ["Treated students with equal respect", 4.8], ["Comments on written work were helpful", 4.8], ["Encouraged independent thought", 4.9], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 4.9]]}, {"term": "Fall 2022", "year": 2022, "code": "ECON 600", "title": "Advanced Microeconomic Theory I", "section": "L1A", "level": "PhD", "enrolled": 21, "responses": 16, "dist": [0, 0, 0, 1, 15], "median": 5.0, "good": 16, "answered": 16, "pct": 100, "file": "reports/2022-fall-econ600-l1a.pdf", "items": [["Helpful when asked for assistance", 5.0], ["Well prepared", 4.9], ["Readily available", 4.9], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 5.0], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.8], ["Stimulated interest in the subject", 4.9], ["Receptive to a variety of perspectives", 4.9], ["Treated students with equal respect", 4.9], ["Comments on written work were helpful", 4.9], ["Encouraged independent thought", 4.9], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 5.0]]}, {"term": "Winter 2023", "year": 2023, "code": "ECON 601", "title": "Advanced Microeconomic Theory II", "section": "L1A", "level": "PhD", "enrolled": 20, "responses": 12, "dist": [0, 0, 0, 1, 11], "median": 5.0, "good": 12, "answered": 12, "pct": 100, "file": "reports/2023-winter-econ601-l1a.pdf", "items": [["Helpful when asked for assistance", 5.0], ["Well prepared", 5.0], ["Readily available", 5.0], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 5.0], ["Showed knowledge of the subject", 5.0], ["Presented information clearly", 4.9], ["Stimulated interest in the subject", 5.0], ["Receptive to a variety of perspectives", 5.0], ["Treated students with equal respect", 5.0], ["Comments on written work were helpful", 4.8], ["Encouraged independent thought", 4.9], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 5.0]]}, {"term": "Fall 2023", "year": 2023, "code": "ECON 600", "title": "Advanced Microeconomic Theory I", "section": "L1A", "level": "PhD", "enrolled": 21, "responses": 8, "dist": [0, 0, 0, 2, 6], "median": 4.8, "good": 8, "answered": 8, "pct": 100, "file": "reports/2023-fall-econ600-l1a.pdf", "items": [["Helpful when asked for assistance", 4.8], ["Well prepared", 4.8], ["Readily available", 4.8], ["Communicated at an appropriate level", 4.8], ["Showed interest in the subject", 4.8], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.7], ["Stimulated interest in the subject", 4.5], ["Receptive to a variety of perspectives", 4.5], ["Treated students with equal respect", 4.8], ["Comments on written work were helpful", 4.3], ["Encouraged independent thought", 4.7], ["Evaluation of work was fair", 4.7], ["Made a positive contribution", 4.7]]}, {"term": "Winter 2024", "year": 2024, "code": "ECON 601", "title": "Advanced Microeconomic Theory II", "section": "L1A", "level": "PhD", "enrolled": 22, "responses": 7, "dist": [0, 0, 0, 0, 7], "median": 5.0, "good": 7, "answered": 7, "pct": 100, "file": "reports/2024-winter-econ601-l1a.pdf", "items": [["Helpful when asked for assistance", 5.0], ["Well prepared", 4.9], ["Readily available", 5.0], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 4.9], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.8], ["Stimulated interest in the subject", 4.6], ["Receptive to a variety of perspectives", 4.8], ["Treated students with equal respect", 5.0], ["Comments on written work were helpful", 4.0], ["Encouraged independent thought", 4.5], ["Evaluation of work was fair", 4.8], ["Made a positive contribution", 4.6]]}, {"term": "Fall 2024", "year": 2024, "code": "ECON 600", "title": "Advanced Microeconomic Theory I", "section": "001", "level": "PhD", "enrolled": 18, "responses": 12, "dist": [0, 0, 0, 0, 11], "median": 5.0, "good": 11, "answered": 11, "pct": 100, "file": "reports/2024-fall-econ600-001.pdf", "items": [["Helpful when asked for assistance", 5.0], ["Well prepared", 5.0], ["Readily available", 5.0], ["Communicated at an appropriate level", 4.8], ["Showed interest in the subject", 5.0], ["Showed knowledge of the subject", 5.0], ["Presented information clearly", 4.8], ["Stimulated interest in the subject", 4.9], ["Receptive to a variety of perspectives", 5.0], ["Treated students with equal respect", 5.0], ["Comments on written work were helpful", 4.8], ["Encouraged independent thought", 5.0], ["Evaluation of work was fair", 5.0], ["Made a positive contribution", 5.0]]}, {"term": "Winter 2025", "year": 2025, "code": "ECON 601", "title": "Advanced Microeconomic Theory II", "section": "001", "level": "PhD", "enrolled": 17, "responses": 6, "dist": [0, 0, 0, 1, 5], "median": 4.9, "good": 6, "answered": 6, "pct": 100, "file": "reports/2025-winter-econ601-001.pdf", "items": [["Helpful when asked for assistance", 5.0], ["Well prepared", 4.9], ["Readily available", 5.0], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 5.0], ["Showed knowledge of the subject", 4.9], ["Presented information clearly", 4.8], ["Stimulated interest in the subject", 5.0], ["Receptive to a variety of perspectives", 5.0], ["Treated students with equal respect", 5.0], ["Comments on written work were helpful", 4.8], ["Encouraged independent thought", 5.0], ["Evaluation of work was fair", 5.0], ["Made a positive contribution", 5.0]]}, {"term": "Summer 2025", "year": 2025, "code": "ECON 101", "title": "Principles of Microeconomics", "section": "L03", "level": "UG", "enrolled": 41, "responses": 4, "dist": [0, 0, 0, 2, 2], "median": 4.5, "good": 4, "answered": 4, "pct": 100, "file": "reports/2025-summer-econ101-l03.pdf", "items": [["Helpful when asked for assistance", 4.5], ["Well prepared", 4.5], ["Readily available", 4.5], ["Communicated at an appropriate level", 4.5], ["Showed interest in the subject", 5.0], ["Showed knowledge of the subject", 5.0], ["Presented information clearly", 4.5], ["Stimulated interest in the subject", 4.5], ["Receptive to a variety of perspectives", 4.8], ["Treated students with equal respect", 4.8], ["Comments on written work were helpful", 4.8], ["Encouraged independent thought", 4.5], ["Evaluation of work was fair", 5.0], ["Made a positive contribution", 4.5]]}, {"term": "Fall 2025", "year": 2025, "code": "ECON 600", "title": "Advanced Microeconomic Theory I", "section": "L1A", "level": "PhD", "enrolled": 22, "responses": 16, "dist": [0, 0, 0, 1, 14], "median": 5.0, "good": 15, "answered": 15, "pct": 100, "file": "reports/2025-fall-econ600-l1a.pdf", "items": [["Helpful when asked for assistance", 5.0], ["Well prepared", 4.9], ["Readily available", 5.0], ["Communicated at an appropriate level", 4.8], ["Showed interest in the subject", 5.0], ["Showed knowledge of the subject", 5.0], ["Presented information clearly", 4.9], ["Stimulated interest in the subject", 4.8], ["Receptive to a variety of perspectives", 4.9], ["Treated students with equal respect", 4.9], ["Comments on written work were helpful", 4.9], ["Encouraged independent thought", 4.8], ["Evaluation of work was fair", 4.9], ["Made a positive contribution", 5.0]]}, {"term": "Winter 2026", "year": 2026, "code": "ECON 601", "title": "Advanced Microeconomic Theory II", "section": "L1A", "level": "PhD", "enrolled": 23, "responses": 6, "dist": [0, 0, 0, 2, 4], "median": 4.8, "good": 6, "answered": 6, "pct": 100, "file": "reports/2026-winter-econ601-l1a.pdf", "items": [["Helpful when asked for assistance", 4.9], ["Well prepared", 4.3], ["Readily available", 4.9], ["Communicated at an appropriate level", 4.9], ["Showed interest in the subject", 4.8], ["Showed knowledge of the subject", 4.8], ["Presented information clearly", 4.3], ["Stimulated interest in the subject", 4.3], ["Receptive to a variety of perspectives", 4.5], ["Treated students with equal respect", 4.5], ["Comments on written work were helpful", 4.5], ["Encouraged independent thought", 4.3], ["Evaluation of work was fair", 4.7], ["Made a positive contribution", 4.8]]}];
+(function(){
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fmtRange=(a)=>{const lo=Math.min(...a),hi=Math.max(...a);return lo===hi?lo.toFixed(1):lo.toFixed(1)+'–'+hi.toFixed(1);};
+  function dist(d){const n=d.reduce((a,b)=>a+b,0)||1;
+    const lab=['very poor','poor','neutral','good','very good'].map((l,i)=>d[i]+' '+l).join(', ');
+    return '<span class="dist" role="img" aria-label="'+lab+'">'+d.map((v,i)=>v?'<i class="d'+(i+1)+'" style="width:'+(100*v/n)+'%"></i>':'').join('')+'</span>';}
+  // overview
+  const courses=[['Math Camp','mathcamp','UBC Economics Math Camp','Instructor, MA and PhD','Summer 2026'],
+    ['ECON 600','econ600','Advanced Microeconomic Theory I','Teaching assistant','2021–2025'],
+    ['ECON 601','econ601','Advanced Microeconomic Theory II','Teaching assistant','2022–2026'],
+    ['ECON 514','econ514','Information and Incentives','Teaching assistant','2021'],
+    ['ECON 101','econ101','Principles of Microeconomics','Teaching assistant','2020, 2025'],
+    ['ECON 303','econ303','Intermediate Microeconomic Analysis II','Teaching assistant','2020'],
+    ['ECON 355','econ355','Introduction to International Trade','Teaching assistant','2019']];
+  document.getElementById('ov-rows').innerHTML=courses.map(([code,id,title,role,yrs])=>{
+    const rs=DATA.filter(r=>r.code===code);
+    const stats=rs.length?('<td class="num">'+rs.length+'</td><td class="num">'+rs.reduce((a,r)=>a+r.responses,0)+'</td><td class="num">'+fmtRange(rs.map(r=>r.median))+'</td><td class="num">'+Math.round(rs.reduce((a,r)=>a+r.pct,0)/rs.length)+'%</td>')
+      :'<td class="num" colspan="4" style="text-align:left;color:var(--muted)">No evaluation report</td>';
+    return '<tr><td><a href="#'+id+'">'+esc(code)+'</a><span class="ctitle">'+esc(title)+'</span></td><td>'+role+'</td><td>'+yrs+'</td>'+stats+'</tr>';
+  }).join('');
+  // per-course tables
+  let k=0;
+  document.querySelectorAll('[data-evals]').forEach(box=>{
+    const rs=DATA.filter(r=>r.code===box.dataset.evals);
+    box.className='tablebox';
+    box.innerHTML='<table><thead><tr><th>Term</th><th>Section</th><th class="num">Enrolled</th><th class="num">Responses</th><th class="num">Overall<br>median /5</th><th>Distribution</th><th class="num">Good or<br>very good</th><th>Report</th><th></th></tr></thead><tbody>'+
+    rs.map(r=>{const id='d'+(k++);
+      return '<tr><td>'+esc(r.term)+'</td><td>'+esc(r.section)+'</td><td class="num">'+r.enrolled+'</td><td class="num">'+r.responses+'</td><td class="num">'+r.median.toFixed(1)+'</td><td>'+dist(r.dist)+'</td><td class="num">'+r.pct+'%</td><td><a href="'+r.file+'" target="_blank" rel="noopener">PDF</a></td>'+
+      '<td><button class="more" type="button" aria-expanded="false" aria-controls="'+id+'">All 14 questions</button></td></tr>'+
+      '<tr class="detail" id="'+id+'" hidden><td colspan="9"><ul class="items">'+r.items.map(it=>'<li><span>'+esc(it[0])+'</span><span>'+it[1].toFixed(1)+'</span></li>').join('')+'</ul></td></tr>';}).join('')+'</tbody></table>';
+  });
+  document.addEventListener('click',e=>{const b=e.target.closest('.more');if(!b)return;
+    const d=document.getElementById(b.getAttribute('aria-controls'));const open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));d.hidden=open;});
+  document.querySelectorAll('[data-tabs]').forEach(box=>{
+    const tabs=box.querySelectorAll('[role=tab]'), open=box.querySelector('.openlink'), fr=box.querySelector('iframe');
+    tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.setAttribute('aria-selected',String(x===t)));
+      open.href=t.dataset.open; if(fr) fr.src=t.dataset.src; const fb=box.querySelector('.fallback a'); if(fb) fb.href=t.dataset.src;}));
+  });
+})();
+
+(function(){
+  var views=[].slice.call(document.querySelectorAll('.view'));
+  var order=['mathcamp','econ600','econ601','econ514','econ101','econ303','econ355'];
+  var names={mathcamp:'Math Camp',econ600:'ECON 600',econ601:'ECON 601',econ514:'ECON 514',econ101:'ECON 101',econ303:'ECON 303',econ355:'ECON 355'};
+  var base=document.title;
+  document.documentElement.classList.add('js-views');
+  order.forEach(function(id,i){var n=document.querySelector('[data-next-for="'+id+'"]'); if(!n) return;
+    var nx=order[i+1]; n.innerHTML=nx?'<a href="#'+nx+'">Next course, '+names[nx]+' &rarr;</a>':'<a href="#home">Back to all courses &rarr;</a>';});
+  function show(){
+    var id=(location.hash||'').slice(1); if(!document.getElementById(id)||!document.getElementById(id).classList.contains('view')) id='home';
+    views.forEach(function(v){v.classList.toggle('on',v.id===id);});
+    document.title=id==='home'?base:names[id]+' · '+base;
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show); show();
+})();
+</script>
+
+</body>
+</html>
