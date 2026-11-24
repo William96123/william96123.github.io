@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="William Duan" />
+  <meta name="dcterms.date" content="2026-11-17" />
+  <title>Tutorial 10 Notes (2026–27)</title>
+  <style>:root{--paper:#f5f6f8;--sheet:#fff;--ink:#1a2130;--muted:#5a6475;--rule:#d9dde4;--accent:#1d5a86}
+@media (prefers-color-scheme:dark){:root{--paper:#11151c;--sheet:#181d26;--ink:#e3e7ee;--muted:#9aa4b4;--rule:#2c3441;--accent:#7fb2da;color-scheme:dark}}
+body{background:var(--sheet);color:var(--ink);font:400 1rem/1.65 "Literata",Georgia,serif;max-width:42rem;margin:0 auto;padding:2rem max(16px,env(safe-area-inset-left,0px)) 3rem}
+header{border-bottom:1px solid var(--rule);margin-bottom:1.5rem}
+h1.title{font-size:1.6rem;line-height:1.2;margin:0 0 .3rem}
+p.author,p.date{margin:0;color:var(--muted);font:400 .9rem "IBM Plex Sans",system-ui,sans-serif}
+p.date{margin-bottom:1rem}
+h2{font:600 1.05rem "IBM Plex Sans",system-ui,sans-serif;margin:2rem 0 .5rem;letter-spacing:.01em}
+a{color:var(--accent)}
+li{margin:.4rem 0}
+.webnote{font:400 .85rem "IBM Plex Sans",system-ui,sans-serif;color:var(--muted);border:1px solid var(--rule);border-radius:4px;padding:.5rem .75rem;margin:0 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+table{border-collapse:collapse;margin:.75rem 0;font:400 .9rem "IBM Plex Sans",system-ui,sans-serif}
+th,td{border:1px solid var(--rule);padding:.3rem .6rem;text-align:left}
+figure{margin:1rem 0}
+figure img{max-width:100%;height:auto;background:#fff;border:1px solid var(--rule)}
+figcaption{font:400 .8rem "IBM Plex Sans",system-ui,sans-serif;color:var(--muted)}
+h1:not(.title){font:600 1.05rem "IBM Plex Sans",system-ui,sans-serif;margin:1.75rem 0 .4rem}
+h2{font:600 .95rem "IBM Plex Sans",system-ui,sans-serif;margin:1.2rem 0 .3rem}
+
+h2{font-size:1.15rem}
+p.subtitle{margin:0 0 .3rem;color:var(--muted);font:400 .95rem "IBM Plex Sans",system-ui,sans-serif}
+strong{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.95rem}
+em{color:var(--muted)}
+ol li{margin:.5rem 0}
+.footnotes{font-size:.85rem;color:var(--muted);margin-top:2rem}
+</style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<p class="dossier-back" style="margin:0 0 1rem;font:400 .85rem/1.4 system-ui,sans-serif"><a href="../" style="color:inherit">&larr; Teaching</a></p>
+<script id="dossier-back-hide">try{if(window.self!==window.top){document.querySelector(".dossier-back").hidden=true}}catch(e){}</script>
+<header id="title-block-header">
+<h1 class="title">Tutorial 10 Notes (2026–27)</h1>
+<p class="author">William Duan</p>
+<p class="date">November 17, 2026</p>
+</header>
+<p>These notes document what was covered in the tutorial session, for
+the benefit of future TAs. They are not intended as study material for
+students.</p>
+<p>November 10 was a statutory holiday, so there was no tutorial that
+week, and this session was organized around the gap. Subjective expected
+utility would normally have a dedicated session with several worked
+examples. Here it was compressed into one example at the start of a
+session otherwise devoted to monotone comparative statics.</p>
+<h2 class="unnumbered" id="topics">Topics</h2>
+<p>Three segments. (i) Subjective expected utility through one small
+decision problem, used to separate acts, states, objective probabilities
+and subjective probabilities. (ii) Monotone comparative statics with
+increasing differences, applied to a monopolist’s price and a driver’s
+choice of speed. (iii) Comparative statics with several choice
+variables, for a firm choosing an input, a number of workers and hours
+per worker.</p>
+<p>The monopolist and the driver are standard problem-set exercises. The
+firm problem is a comparative-statics question from a past final exam.
+The figures at the end are reference sketches.</p>
+<h2 class="unnumbered" id="objective">Objective</h2>
+<p>The first segment is about conceptual clarity. Students should leave
+able to set out a decision problem and say which elements are acts,
+which are states, which probabilities are objective and which are
+subjective, and how to tell them apart. The example is only a vehicle
+and can be changed freely.</p>
+<p>The second and third segments share one thread. Comparative statics
+concerns the maximizer, not the maximum, so the objective may be
+transformed in any way that preserves the maximizer, by taking logs,
+dividing by a positive function of the parameter, or dropping terms that
+do not involve both the choice and the parameter. The skill is to
+transform until increasing differences is visible, rather than giving up
+when the original cross-partial is ambiguous. With several choice
+variables the same idea needs a picture of how the choices feed into one
+another, and that picture is the main thing the third segment
+teaches.</p>
+<h2 class="unnumbered" id="comments">Comments</h2>
+<ul>
+<li><p><em>Subjective expected utility.</em> A pizza shop may stock a
+classic Italian capricciosa (utility 10), a pepperoni (2) and a durian
+and mango “fruit platter” (<span class="math inline">\(-1\)</span>),
+each independently with probability <span
+class="math inline">\(1/2\)</span>. The agent buys herself or lets
+another person buy. A nice buyer chooses as she would and spares her the
+trip, worth one extra unit. A mean buyer picks the worst pizza possible.
+Figure 1 is the tree to draw. Whatever example is used, the explanation
+must get three things across.</p>
+<ol>
+<li><p>What stays fixed and what can change. Objective probabilities,
+and even utilities, may depend on the state, but the subjective
+probability of a state may not depend on the act. In Figure 1 the same
+split with the same <span class="math inline">\(q\)</span> sits under
+both acts, and under buying herself the state is simply
+payoff-irrelevant. Give students a test for each label. An act is
+something the agent can pick. A state is not chosen but affects the
+consequence. A probability is objective if it is a feature of the
+environment and subjective if it can only be the agent’s own
+assessment.</p></li>
+<li><p>Once the distribution over states is known, the problem reduces
+to a simple choice under risk. Each act is an ordinary lottery, here
+worth <span class="math inline">\(5.5\)</span> for buying herself and
+<span class="math inline">\(-0.5q + 6.5(1-q)\)</span> for letting the
+other person buy. Uncertainty about <span
+class="math inline">\(q\)</span> itself changes nothing, since expected
+utility is linear in <span class="math inline">\(q\)</span> and only
+<span class="math inline">\(\mathbb{E}[q]\)</span> matters.</p></li>
+<li><p>The question students are most likely to meet is what can be said
+about <span class="math inline">\(q\)</span> given observed choices over
+acts. Here letting the other person buy reveals <span
+class="math inline">\(q &lt; 1/7\)</span>, and buying herself reveals
+<span class="math inline">\(q \geq 1/7\)</span>. The threshold was not
+worked out in the tutorial but is the natural way to end the
+example.</p></li>
+</ol></li>
+<li><p><em>Increasing differences.</em> Two points to stress beyond the
+definition. First, <span class="math inline">\(x&#39;&#39;\)</span> and
+<span class="math inline">\(x&#39;\)</span> in the definition are
+arbitrary points, not maximizers, and students who read them as optimal
+choices find the theorem circular. Second, the board tied the result to
+Tutorials 8 and 9. An easy way to show that <span
+class="math inline">\(x^*\)</span> increases in <span
+class="math inline">\(\theta\)</span> is to evaluate the first-order
+derivative under <span class="math inline">\(\theta&#39;&#39;\)</span>
+at <span class="math inline">\(x^*(\theta&#39;)\)</span> and sign it,
+which is the variational argument used there for prudence and risk
+aversion, and increasing differences is simply an easy way to sign that
+derivative. The connection was pointed out rather than worked through.
+This smooth argument needs concavity in the choice, which the general
+theorem does not, and that is worth saying.</p>
+<p>Three remarks went with the definition. Increasing differences is
+sufficient, not necessary. A monotone transformation of the objective
+may have it when the original does not. Terms that do not involve both
+the choice and the parameter drop out of the cross-partial. For a
+decreasing relationship, use increasing differences in the choice and
+minus the parameter.</p></li>
+<li><p><em>The monopolist.</em> Taking logs of the profit <span
+class="math inline">\((p-c)Q(p,\theta)\)</span>, which is allowed where
+profit is positive, the first term does not involve <span
+class="math inline">\(\theta\)</span> and <span
+class="math display">\[\frac{\partial^2}{\partial
+p\,\partial\theta}\Big[\log(p-c) + \log Q(p,\theta)\Big] =
+\frac{\partial}{\partial\theta}\left[\frac{Q_p(p,\theta)}{Q(p,\theta)}\right],\]</span>
+so the price rises with <span class="math inline">\(\theta\)</span> if
+<span class="math inline">\(Q_p/Q\)</span> is nondecreasing in <span
+class="math inline">\(\theta\)</span>. The board called this the
+elasticity of demand. Strictly it is the semi-elasticity, but since
+<span class="math inline">\(p\)</span> is positive and does not depend
+on <span class="math inline">\(\theta\)</span>, the condition is
+equivalent to demand becoming less elastic as <span
+class="math inline">\(\theta\)</span> rises, which is the form in which
+the condition is usually stated. Say so explicitly, or students will
+think these are different conditions.</p></li>
+<li><p><em>The driver.</em> The objective is <span
+class="math display">\[f(w,s) = w\left(T - \frac{d}{s}\right) - g(s) -
+p(s)\,(L + \tau w),\]</span> where <span
+class="math inline">\(T\)</span> is the hours available for commuting
+and working, <span class="math inline">\(g(s)\)</span> the gas cost,
+<span class="math inline">\(p(s)\)</span> the accident probability,
+<span class="math inline">\(L\)</span> the damage and <span
+class="math inline">\(\tau\)</span> the hours lost to an accident. The
+cross-partial in <span class="math inline">\((w,s)\)</span> is <span
+class="math inline">\(d/s^2 - p&#39;(s)\tau\)</span>, which cannot be
+signed, since driving faster saves commuting time but raises the
+expected time lost. Dividing by <span class="math inline">\(w\)</span>
+preserves the maximizer, after which <span class="math inline">\(T -
+d/s\)</span> and <span class="math inline">\(p(s)\tau\)</span> no longer
+involve <span class="math inline">\(w\)</span> and <span
+class="math display">\[\frac{\partial^2}{\partial s\,\partial
+w}\,\frac{f(w,s)}{w} = \frac{g&#39;(s)}{w^2} +
+\frac{p&#39;(s)\,L}{w^2},\]</span> which is positive because <span
+class="math inline">\(g\)</span> and <span
+class="math inline">\(p\)</span> increase with speed. So speed rises
+with the wage. The intuition is that dividing by <span
+class="math inline">\(w\)</span> measures everything in hours, and the
+money costs of speed fall in hours as the wage rises. This is the
+example that shows students transforming the objective is a method and
+not a trick.</p></li>
+<li><p><em>Several choice variables.</em> The firm solves <span
+class="math display">\[\max_{x,\,n,\,h}\ f(x,n,h) - px - wnh -
+bn,\]</span> where <span class="math inline">\(b\)</span> is the benefit
+cost per worker. For benefits and for total hours, follow the standard
+solution. Maximizing out <span class="math inline">\(h\)</span> and
+<span class="math inline">\(x\)</span> leaves <span
+class="math inline">\(b\)</span> interacting with <span
+class="math inline">\(n\)</span> only through <span
+class="math inline">\(-bn\)</span>, so <span
+class="math inline">\(n\)</span> does not increase with <span
+class="math inline">\(b\)</span>, with no assumption on <span
+class="math inline">\(f\)</span>. Reparametrizing with total hours <span
+class="math inline">\(H = nh\)</span>, the wage interacts only with
+<span class="math inline">\(H\)</span> through <span
+class="math inline">\(-wH\)</span>, so total hours do not increase with
+<span class="math inline">\(w\)</span>, again with no assumption. This
+is why total hours appear on the board.</p>
+<p>The effect of <span class="math inline">\(w\)</span> on <span
+class="math inline">\(n\)</span> itself is harder, and the board handled
+it with Figure 2. The direct effects of <span
+class="math inline">\(w\)</span> on <span
+class="math inline">\(n\)</span> and on <span
+class="math inline">\(h\)</span> are negative and fixed by the objective
+(the cross-partials are <span class="math inline">\(-h\)</span> and
+<span class="math inline">\(-n\)</span>), and <span
+class="math inline">\(w\)</span> has no direct effect on <span
+class="math inline">\(x\)</span>. The links between the choice variables
+have signs that depend on <span class="math inline">\(f\)</span>. If all
+are positive, every indirect path from <span
+class="math inline">\(w\)</span> to <span
+class="math inline">\(n\)</span> has the same sign as the direct effect,
+and no comparison of magnitudes is needed. The trick stated on the board
+was that with loops, positive links are preferred, because the sign of a
+positive loop does not depend on how many times it is traversed. The
+discussion ended at making sure there are enough assumptions for
+increasing differences in all the relevant pairs. Written out, the wish
+list is <span class="math inline">\(f_{xn} \geq 0\)</span>, <span
+class="math inline">\(f_{xh} \geq 0\)</span> and <span
+class="math inline">\(f_{nh} \geq w\)</span>, under which all three
+choices fall with the wage. The contrast with total hours, which need no
+assumption at all, is worth pointing out.</p></li>
+</ul>
+<h2 class="unnumbered" id="practical-notes">Practical notes</h2>
+<p>Subjective expected utility is compressed here because of the
+holiday. In a normal year it gets its own session with several worked
+examples, and this example can serve as the first of them. The driver
+example should not be cut, and Figure 2 should be drawn in full, since
+the graphical treatment of several choice variables is the most
+important thing in the third segment.</p>
+<p>A future TA should check whether a problem set covering this material
+is live and, if so, treat the related material as method rather than as
+solutions.</p>
+<h2 class="unnumbered" id="reference-figures">Reference figures</h2>
+<figure>
+<img style="width:min(100%,30rem)" src="econ600-t10-fig1.svg" />
+<figcaption>The decision problem with each component labelled. The act
+is chosen and the state is not. The same subjective probability <span
+class="math inline">\(q\)</span> sits under both acts, and the lotteries
+at the end come from the objective stock probabilities.</figcaption>
+</figure>
+<figure>
+<img style="width:min(100%,30rem)" src="econ600-t10-fig2.svg" />
+<figcaption>Channels from the wage <span
+class="math inline">\(w\)</span> to the number of workers <span
+class="math inline">\(n\)</span>, replicating the board diagram. Red
+arrows are fixed by the problem, read off the objective. Purple arrows
+are links between the choice variables whose sign depends on assumptions
+on <span class="math inline">\(f\)</span>. The wish list makes them all
+positive, so every path from <span class="math inline">\(w\)</span> to
+<span class="math inline">\(n\)</span> carries the same
+sign.</figcaption>
+</figure>
+</body>
+</html>
